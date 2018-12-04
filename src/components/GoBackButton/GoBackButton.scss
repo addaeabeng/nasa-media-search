@@ -1,0 +1,27 @@
+@import '../../styles/_config.scss';
+@import '../../styles/_mixins.scss';
+
+.gobackbutton {
+  display: inline-block;
+  margin-bottom: $spacer-lg;
+  font-size: rem(16px);
+  font-weight: 600;
+  color: $color-gray;
+  cursor: pointer;
+  display: block;
+
+
+  &__image {
+    height: 1rem;
+    margin-right: $spacer-sm;
+    transition: transform 200ms ease-in-out;
+
+    &:hover {
+      transform: translateX(-4px);
+    }
+  }
+
+  @include from-medium {
+    font-size: rem(18px);
+  }
+}

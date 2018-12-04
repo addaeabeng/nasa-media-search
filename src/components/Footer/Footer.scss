@@ -1,0 +1,43 @@
+@import '../../styles/_config.scss';
+@import '../../styles/_mixins.scss';
+
+.footer {
+  padding: $spacer-sm;
+  font-size: rem(12px);
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border-top: 1px solid #dae0e4;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);
+
+  &__icon {
+    margin-right: 2px;
+    vertical-align: -2px;
+    margin-left: 2px;
+    width: 14px;
+    height: auto;
+    fill: green;
+  }
+
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include from-medium {
+    text-align: center;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,26 @@
+$gallery-gap: 1rem;
+
+.gallery {
+  margin: auto;
+  padding: 0;
+  column-gap: $gallery-gap;
+  &__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 0 $gallery-gap;
+    break-inside: avoid-column;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery {
+    column-count: 3;
+  }
+}

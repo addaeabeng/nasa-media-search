@@ -1,0 +1,48 @@
+@import '../../styles/_config.scss';
+@import '../../styles/_mixins.scss';
+
+.header {
+  width: 100%;
+  padding: $spacer 0;
+  align-self: baseline;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  color: $color-white;
+
+  @include from-medium {
+    padding: $spacer 0;
+  }
+
+  &__wrapper {
+    @include wrapper;
+    align-items: center;
+  }
+
+  &__logoLink {
+    margin-right: $spacer-sm;
+  }
+
+  &__logocontainer {
+    width:100%;
+    display: block;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 250px;
+    height: 60px;
+    width: auto;
+    margin:0px auto;
+
+    @include from-medium() {
+      height: 64px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+}
+
+

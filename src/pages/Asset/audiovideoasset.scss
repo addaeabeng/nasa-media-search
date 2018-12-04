@@ -1,0 +1,80 @@
+@import '../../styles/_config.scss';
+@import '../../styles/_mixins.scss';
+
+.audiovideoasset {
+  &__content {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 1rem;
+    padding: 0;
+    text-align:center;
+  }
+  @media (min-width: 768px) {
+    &__content {
+      padding: 3rem 1rem; }
+  }
+
+  &__player {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    background: #2c2b2b;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+  @media (min-width: 768px) {
+    &__player {
+      display: inline-block;
+      vertical-align: top;
+      width: 640px;
+      box-sizing: content-box;
+      padding: 1rem; }
+  }
+
+  &__data {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    &__data {
+      display: inline-block;
+      width: 45%;
+      margin-top: 1rem;
+      padding: 0;
+      vertical-align: top; }
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 1.8rem;
+    color: $color-white;
+  }
+
+  &__description {
+    color: $color-white; }
+
+  &__meta {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $color-white; }
+}
+
+@media (max-width: 768px) {
+  .player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
